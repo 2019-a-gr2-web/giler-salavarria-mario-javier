@@ -13,6 +13,8 @@ import {
     Response
 } from '@nestjs/common';
 import {AppService} from './app.service';
+import * as Joi from '@hapi/joi';
+
 
 // http://192.168.1.10:3000/segmentoInicial/segmentoAccion
 // http://192.168.1.10:3000/mascotas/crear
@@ -106,17 +108,32 @@ export class AppController {
     }
 
     @Get('/semilla')
-    semilla(@Request() request){
+    semilla(@Request() request,
+    @Response() response){
         console.log(request.cookies);
         const cookies = request.cookies;
-        if(cookies.micookie){
-            return 'ok'
+        const esquemaValidationNumero = Joi.object().keys({
+            numero: Joi.number().integer().required()
+        });
+
+        const objetoValidacion = {numero:cookies.numero};
+        const resultado = Joi.validate(objetoValidacion, esquemaValidationNumero);
+        if(resultado.error){
+            console.log('Resultado: ', resultado);
         }else{
-            return ':('
+            console.log('Numero valido');
+        }
+        if(cookies.micookie){
+            const horaFechaServidor = new Date();
+            const minutos = horaFechaServidor.getMinutes();
+            horaFechaServidor.setMinutes(minutos + 1);
+            response.cookie('fechaServidor', new Date().getTime(), {expires:new Date()});
+            return response.send('ok');
+        }else{
+            return response.send(':(');
         }
 
     }
-
 
 
 
