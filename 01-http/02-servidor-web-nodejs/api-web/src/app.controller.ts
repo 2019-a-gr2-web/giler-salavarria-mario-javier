@@ -123,11 +123,20 @@ export class AppController {
         }else{
             console.log('Numero valido');
         }
+        const cookieSegura =  request.signedCookies.fechaServidor;
+        if(cookieSegura){
+            console.log('Cookie segura');
+        }else{
+            console.log('No es válida');
+        }
         if(cookies.micookie){
             const horaFechaServidor = new Date();
             const minutos = horaFechaServidor.getMinutes();
             horaFechaServidor.setMinutes(minutos + 1);
-            response.cookie('fechaServidor', new Date().getTime(), {expires:new Date()});
+            response.cookie('fechaServidor',
+                //new Date().getTime(),
+                //{expires:horaFechaServidor}
+            );
             return response.send('ok');
         }else{
             return response.send(':(');
