@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ecd4773-fa2a-42d9-893d-7d6ee3e0fcdf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-rest/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-rest/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-rest/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api-rest/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../02-servidor-web-nodejs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../02-servidor-web-nodejs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-servidor-web-nodejs/api-web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../02-servidor-web-nodejs/api-web/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../02-servidor-web-nodejs/api-web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../02-servidor-web-nodejs/api-web/src/main.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +21,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api-rest/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="1122">
+              <caret line="78" column="111" selection-start-line="78" selection-start-column="111" selection-end-line="78" selection-end-column="111" />
+              <folding>
+                <element signature="e#0#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api-rest/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,9 +66,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1089" />
+    <option name="x" value="950" />
+    <option name="width" value="979" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -60,7 +76,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -83,6 +98,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -117,15 +133,17 @@
       <updated>1555880582509</updated>
       <workItem from="1555880585041" duration="3236000" />
       <workItem from="1556035284276" duration="151000" />
-      <workItem from="1556047624637" duration="1168000" />
+      <workItem from="1556047624637" duration="1275000" />
+      <workItem from="1556058907047" duration="2813000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4555000" />
+    <option name="totallyTimeSpent" value="7475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -140,7 +158,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31769437" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31666666" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -153,8 +171,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/api-rest/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
@@ -163,8 +181,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api-rest/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+        <state relative-caret-position="1122">
+          <caret line="78" column="111" selection-start-line="78" selection-start-column="111" selection-end-line="78" selection-end-column="111" />
+          <folding>
+            <element signature="e#0#103#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
