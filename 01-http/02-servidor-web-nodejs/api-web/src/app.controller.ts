@@ -144,7 +144,69 @@ export class AppController {
 
     }
 
+    @Get('/inicio')
+    inicio(
+        @Response() res
+    ){
+        function holaMundo(){
+            console.log('HOla mundo');
+        }
+        const respuestaHolaMundo = holaMundo();
+        console.log('Resp hola mundo:', respuestaHolaMundo);
+        function suma(a:number,b:number){
+            return a+b;
+        }
+        const respuestaSuma = suma(1, 2);
+        console.log('Resp suma', respuestaSuma);
+//Condidicionales
+//truty -> true
+//falsy -> false
+        if(undefined){//Falsy
+            console.log('Verdadero "undefined"');
+        }else{
+            console.log('False "undefined"');
+        }
+        if(null){//Falsy
+            console.log('Verdadero "null"');
+        }else{
+            console.log('False "null"');
+        }
+        if({}){//Truty
+            console.log('Verdadero "{}"');
+        }else{
+            console.log('False "{}"');
+        }
 
+//Operadores de arreglos en js
+        const arreglo = [1,2,3,4,5,6];
+
+//1) Impriman en consola todos los elementos
+        arreglo.forEach(n=> console.log(n));
+        //2) Sumen 2 a los pares y 1 a los impares
+        const arregloMap = [1,2,3,4,5,6];
+        const rMap = arregloMap.map((valorActual)=>{
+            const esPar = valorActual%2==0;
+            if(esPar){
+                return valorActual + 2;
+            }else{
+                return valorActual + 1;
+            }
+        })
+        console.log(rMap);
+        //3) Encuentren si hay el numero 4
+        const arregloFind = [1,2,3,4,5,6];
+        const rFind = arregloFind.find((valorActual)=>{
+            return valorActual ==4;
+        })
+        console.log(rFind);
+        //4) Filtren los numeros menores a 5
+        const arregloFilter = [1,2,3,4,5,6];
+        const rFilter = arregloFilter.filter((valorActual)=>{
+                return valorActual<5;
+        })
+        console.log(rFilter);
+        return res.render('inicio');
+    }
 
 
     // js -> ts
@@ -170,6 +232,17 @@ export class AppController {
 
 
 }
+
+
+
+
+
+
+//5) Todos los valores positivos
+//6) Algun valor es menor que 2
+//7) Sumen todos los valores
+//8) Resten todos los valores de 100
+
 
 
 /*

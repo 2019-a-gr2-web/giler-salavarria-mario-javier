@@ -7,7 +7,7 @@ export class AppController {
   }
 
   @Get('/suma')
-  suma(@Query() headers,
+  suma(@Headers() headers,
        @Response() resultado,
        @Request() request
   ) {
