@@ -2,3 +2,14 @@
  <% const nombre ='Mario';%>
  <%= nombre%>
  <% const arreglo = [1,2,3,4,5,6];%>
+ <%=arreglo%>
+ <%const objeto = {nombre:'Mario'}%>
+ <%=objeto.nombre%>
+<%arreglo.forEach((valorActual)=>{%>
+ <p><%=valorActual%></p>
+ <%})%>
+ <ol>
+ <%arreglo.forEach((valorActual)=>{%>
+ <li><%=valorActual%></li>
+ <%})%>
+  </ol>

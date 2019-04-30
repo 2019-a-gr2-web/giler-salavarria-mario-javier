@@ -100,7 +100,7 @@ export class AppController {
       }
       if (cookieSeg.vida <=0) {
         return response.status(201).send({
-          'resultado: ': `Resutlado: ${resta}`,
+          'resultado: ': `Respuesta: ${resta}`,
           'usuario: ': `Usuario: ${cookie1.usuario}`,
           'mensaje: ': 'Se le terminaron los puntos'
         });
@@ -110,7 +110,7 @@ export class AppController {
         return response.status(201).send({
           'resultado: ': `Resutlado: ${resta}`,
           'usuario: ': `Usuario: ${cookie1.usuario}`,
-          'intentos restantes: ': `Intentos restantes: ${cookieSeg.vida}`
+          'puntos: ': `Puntos: ${cookieSeg.vida}`
         });
       }
     }

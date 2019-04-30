@@ -205,6 +205,51 @@ export class AppController {
                 return valorActual<5;
         })
         console.log(rFilter);
+        //5)Todos los valores son positivos TRUE FALSE
+        const arregloNumerosEvery = [1,2,3,4,5,6];
+        const rEvery = arregloNumerosEvery.every( //operador logico AND
+            (valorActual)=>{
+                return valorActual > 0
+            }
+        );
+        console.log(rEvery);
+        //6)
+        const arregloNumerosSome = [1,2,3,4,5,6];
+        const rSome = arregloNumerosSome.some(
+            (valorActual)=>{
+                return valorActual < 2
+            }
+        );
+        console.log(rSome);
+        //7)Reduce
+        const arregloNumeroReduce =[1,2,3,4,5,6];
+        const valorDondeEmpiezaCalculo = 0;
+        const rReduce = arregloNumeroReduce.reduce(
+            (acumulado, valorActual)=>{
+                if(valorActual<4){
+                    return (0.1*valorActual) + valorActual + acumulado + 5;
+                }else{
+                    return (0.15*valorActual) + valorActual + acumulado + 3;
+                }
+            },
+            valorDondeEmpiezaCalculo
+        );
+        console.log(rReduce);
+        //Ejercicio
+        const arregloEjercicio = [1,2,3,4,5,6];
+        const rEjercicio = arregloEjercicio.map(
+            (valorActual)=>{
+                return valorActual + 10;
+        }).filter(
+            (valorActual)=>{
+                return valorActual > 15;
+            }
+        ).some(
+            (valorActual)=>{
+                return valorActual>30
+            }
+        )
+        console.log(rEjercicio);
         return res.render('inicio');
     }
 
