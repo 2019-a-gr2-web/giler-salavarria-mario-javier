@@ -250,7 +250,12 @@ export class AppController {
             }
         )
         console.log(rEjercicio);
-        return res.render('inicio');
+        return res.render('inicio', {estaVivo:true});
+    }
+
+    @Get('peliculas')
+    peliculas(@Response() res){
+        return res.render('peliculas/inicio', {});
     }
 
 
