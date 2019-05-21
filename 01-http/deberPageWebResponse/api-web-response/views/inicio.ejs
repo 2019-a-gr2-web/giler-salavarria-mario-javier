@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Deber Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    .divider-new,
+    .divider-full {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        font-weight: 300;
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    .divider-new::after,
+    .divider-new::before {
+        flex: 1;
+        content: '';
+        height: 1.5px;
+        background: #666
+    }
+
+    .divider-new::before {
+        margin: 0 .45em 0 0
+    }
+
+    .divider-new::after {
+        margin: 0 0 0 .45em
+    }
+
+    #txtExplain {
+        margin-bottom: 20px;
+    }
+
+    .hoverable:hover {
+        transition: box-shadow .25s;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+    }
+
+    .card {
+        background-color: #2BBBAD;
+        color: #FFF;
+        margin: .5rem 0 3rem;
+        transition: box-shadow .25s;
+        border-radius: 2px;
+        min-height: 380px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+    }
+
+    @media (max-width: 1200px) {
+        .card {
+            min-height: 400px;
+        }
+    }
+
+    .card-header {
+        height: 45px;
+        border-bottom: 4px solid white;
+        background-color: #2E2E2E
+    }
+
+    .card-title {
+        line-height: 20px !important;
+        margin: 2px 0;
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .card-subtitle {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    .card .card-content {
+        padding: 20px;
+        border-radius: 0 0 2px 2px;
+        clear: both;
+    }
+
+    .card-content p {
+        font-size: 14px;
+    }
+
+    .long-desc {
+        position: relative;
+        /* top: -20px; */
+    }
+
+    .long-desc p {
+        clear: both;
+    }
+
+    .img-prod {
+        position: relative;
+        float: right;
+        top: -45px;
+    }
+
+    .btn-prod {
+        display: block;
+    }
+
+    #img1 {
+        display: none;
+    }
+
+    #img2 {
+        display: none;
+    }
+
+    #img3 {
+        display: none;
+    }
+</style>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="divider-new">Responsive cards</h1>
+            <h3 id="txtExplain" class="text-center"></h3>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!--First Column-->
+        <div class="col-md-4">
+
+            <div class="card default-color white-text hoverable">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="img-prod">
+                        <img src="http://placehold.it/90x130" class="img-thumbnail">
+                    </div>
+                    <h2 class="card-title">ABCD</h2>
+                    <h3 class="card-subtitle">Short description</h3>
+                    <button id="btnProd1" class="btn btn-warning btn-prod hoverable">Click for photo</button>
+                    <div class="text-justify long-desc">
+                        <p id="txt1" class="flow-text">Long description. Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+                            Suspendisse a pellentesque dui, non felis.</p>
+                        <img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/9/91/A._Murray_MacKay_Bridge.jpg" class="img-responsive hoverable" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/.First Column-->
+
+        <!--Second Column-->
+        <div class="col-md-4">
+
+            <div class="card default-color white-text hoverable">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="img-prod">
+                        <img src="http://placehold.it/90x130" class="img-thumbnail">
+                    </div>
+                    <h2 class="card-title">EFGH</h2>
+                    <h3 class="card-subtitle">This is short too</h3>
+                    <button id="btnProd2" class="btn btn-warning btn-prod hoverable">Click for photo</button>
+                    <div class="text-justify long-desc">
+                        <p id="txt2" class="flow-text">Another long description for this product. Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. </p>
+                        <img id="img2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Suspended-slab-formwork.jpg/1024px-Suspended-slab-formwork.jpg" class="img-responsive hoverable" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--/.Second Column-->
+
+        <!--Third Column-->
+        <div class="col-md-4">
+
+            <div class="card default-color white-text hoverable">
+                <div class="card-header"></div>
+                <div class="card-content">
+                    <div class="img-prod">
+                        <img src="http://placehold.it/90x130" class="img-thumbnail">
+                    </div>
+                    <h2 class="card-title">IJKL</h2>
+                    <h3 class="card-subtitle">Another short one</h3>
+                    <button id="btnProd3" class="btn btn-warning btn-prod hoverable">Click for photo</button>
+                    <div class="text-justify long-desc">
+                        <p id="txt3" class="flow-text">Descrizione estesa del prodotto. Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Nunc et semper.</p>
+                        <img id="img3" src="https://c2.staticflickr.com/4/3689/18740093603_11239389ea_b.jpg" class="img-responsive hoverable" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/.Third Column-->
+
+    </div>
+    <!--/.End of Row-->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="divider-full"></div>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="main-area">
+        <h2>Main Column Heading</h2>
+
+        <p>This is the main area (or column). Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+
+        <!-- info-box -->
+        <div class="info-box hide-small">
+            <p><strong>This content is not absolutely vital and does not need to display on mobile devices</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut aliquip ex ea commodo consequat ullamco laboris nisi ut aliquip.
+                Sint occaecat cupidatat non proident.</p>
+        </div>
+        <!-- /info-box -->
+
+        <p>nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</p>
+
+        <img src="https://learnwebcode.github.io/Web-Design-for-Beginners/bird.jpg" alt="Bird on fence.">
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        <p>In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+    </div>
+
+    <aside class="sidebar">
+        <p>This is the sidebar. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu.</p>
+    </aside>
+</div>
+</body>
+<script>
+  $('#txtExplain').html("Try and resize the window to see how the cards adapt.<br>Use the buttons in each card to show (or hide) the images");
+
+  $('#btnProd1').click(function() {
+    $('#txt1').toggle("slow");
+    $('#img1').toggle("slow");
+
+    if ($('#btnProd1').text() == "Click for photo") {
+      $('#btnProd1').text("Click for description");
+    } else {
+      $('#btnProd1').text("Click for photo");
+    }
+  });
+
+  $('#btnProd2').click(function() {
+    $('#txt2').toggle("slow");
+    $('#img2').toggle("slow");
+    if ($('#btnProd2').text() == "Click for photo") {
+      $('#btnProd2').text("Click for description");
+    } else {
+      $('#btnProd2').text("Click for photo");
+    }
+  });
+
+  $('#btnProd3').click(function() {
+    $('#txt3').toggle("slow");
+    $('#img3').toggle("slow");
+    if ($('#btnProd3').text() == "Click for photo") {
+      $('#btnProd3').text("Click for description");
+    } else {
+      $('#btnProd3').text("Click for photo");
+    }
+  });
+</script>
+</html>
