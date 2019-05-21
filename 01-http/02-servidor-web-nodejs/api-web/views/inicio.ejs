@@ -1,21 +1,26 @@
 
- <% const nombre ='Mario';%>
- <%= nombre%>
- <% const arreglo = [1,2,3,4,5,6];%>
- <%=arreglo%>
- <%const objeto = {nombre:'Mario'}%>
- <%=objeto.nombre%>
-<%arreglo.forEach((valorActual)=>{%>
- <p><%=valorActual%></p>
- <%})%>
- <ol>
- <%arreglo.forEach((valorActual)=>{%>
- <li><%=valorActual%></li>
- <%})%>
-  </ol>
+<% const nombre = 'Eguez';  // codigo JS %>
+<%= nombre %>
+<% const arreglo = [1,2,3,4,5]; %>
+<% const objeto = {nombre:'Adrian'}; %>
+<%= objeto %>
 
- <%if(estaVivo){%>
-     <h1>Está VIVO !!</h1>
- <%} else {%>
-     <h1>C Murio</h1>
- <%}%>
+<% arreglo.forEach((valorActual)=>{ %>
+  <p> Numero: <%= valorActual %> </p>
+<% })%>
+
+<ol>
+<% arreglo.forEach((valorActual)=>{ %>
+    <li> Numero: <%= valorActual %> </li>
+<% })%>
+</ol>
+
+<% if(estaVivo){%>
+  <h1>ESTAAA VIVOOo!!! </h1>
+<% } else { %>
+  <h1>C murio :(  </h1>
+<% }%>
+
+
+
+
