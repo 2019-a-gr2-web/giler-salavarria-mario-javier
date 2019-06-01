@@ -38,7 +38,7 @@ export class TragosService{
     eliminarPorId(id:number):Trago[]{
         const indice = this.bddTragos.findIndex(
             (trago)=> {
-                return trago.id ===id;
+                return trago.id === id;
             }
         );
         this.bddTragos.splice(indice, 1);
@@ -47,11 +47,11 @@ export class TragosService{
     actualizar(tragoActualizado:Trago, id:number):Trago[]{
         const indice = this.bddTragos.findIndex(
             (trago)=> {
-                return trago.id ===id;
+                return trago.id === id;
             }
         );
         tragoActualizado.id = this.bddTragos[indice].id
-        this.bddTragos[indice]=tragoActualizado;
+        this.bddTragos[indice] = tragoActualizado;
         return this.bddTragos;
     }
 }

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Gestión de Equipos</title>
+</head>
+<style>
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: auto;
+        text-align: right;
+    }
+    #tblList thead{
+        background: gray;
+        color: #FFF;
+        width:100%;
+    }
+</style>
+<body>
+<div class="page-header">
+    <h1>Gestión de Jugadores <%=nombre%> <a href="/web/eliminarCookieSeg"><button class="btn btn-success">Salir</button></a></h1>
+</div>
+<div class="form-group">
+    <div class="col-lg-offset-2 col-sm-4">
+        <a href="/api/jugador/crearPaginaJugador"><button class="btn btn-success">Crear Jugador</button></a>
+    </div>
+    <div class="col-lg-offset-2 col-sm-4">
+        <a href="/api/equipofutbol/equipos"><button class="btn btn-success">Cancelar Jugador</button></a>
+    </div>
+    <br>
+    <br>
+    <div class="col-lg-offset-4 col-sm-8">
+        <form action="/api/jugador/buscarJugador" method="get">
+            <label for="nombreCompletoJugadorId"></label>
+            <input type="text" id="nombreCompletoJugadorId" name="nombreCompletoJugador" placeholder="Buscar" style="width: 50%">
+            <button type="submit" class="btn btn-success">Buscar</button>
+        </form>
+    </div>
+</div>
+<div class="container">
+    <table class="table" id="makeEditable">
+        <thead>
+        <tr>
+            <th hidden="true">ID</th>
+            <th>Número Camiseta</th>
+            <th>Nombre Completo Jugador</th>
+            <th>Poder Especial Dos</th>
+            <th>Fecha Ingreso Equipo</th>
+            <th>Goles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% arreglojugador.forEach((jugador)=>{ %>
+        <tr class="info">
+            <td> <%=jugador.numeroCamiseta%> </td>
+            <td> <%=jugador.nombreCompletoJugador%> </td>
+            <td> <%=jugador.poderEspecialDos%> </td>
+            <td> <%=jugador.fechaIngresoEquipo%> </td>
+            <td> <%=jugador.goles%> </td>
+            <td>
+                <form action="/api/jugador/eliminarJugador" method="post">
+                    <label for="id" hidden="true">Id</label>
+                    <input type="number" hidden="true" id="id" name="id" value="<%=jugador.id%>">
+                    <button type="submit" class="btn btn-success">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        <% })%>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

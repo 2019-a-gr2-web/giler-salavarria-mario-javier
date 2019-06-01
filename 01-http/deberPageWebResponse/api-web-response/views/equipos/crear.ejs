@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <title>Gestión de Equipos</title>
+</head>
+<style>
+    #footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: auto;
+        text-align: right;
+    }
+    #tblList thead{
+        background: gray;
+        color: #FFF;
+        width:100%;
+    }
+</style>
+
+<body>
+<h1>Creación de Equipos <%=nombre%> <a href="/web/eliminarCookieSeg"><button class="btn btn-success">Salir</button></a></h1>
+<br>
+<div class="container">
+    <form id="frmPerson" class="form-horizontal" action="/api/equipofutbol/crearEquipo" method="post">
+        <div class="form-group">
+            <label for="nombreI" class="col-sm-2 control-label">Nombre</label>
+            <div class="col-sm-4">
+                <input type="text" id="nombreID" name="nombre" class="form-control" placeholder="Nombre">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="ligaId" class="col-lg-2 control-label">Liga</label>
+            <div class="col-sm-4">
+                <input type="text" id="ligaId" name="liga" class="form-control" placeholder="Liga">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="fechaId" class="col-lg-2 control-label">Fecha Creación</label>
+            <div class="col-sm-4">
+                <input type="date" id="fechaId" name="fechaCreacion" class="form-control" placeholder="Fecha Creación">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="numeroCopasInternacionalesId" class="col-lg-2 control-label">Número De Copas Internacionales</label>
+            <div class="col-sm-4">
+                <input type="number" id="numeroCopasInternacionalesId" name="numeroCopasInternacionales" class="form-control" placeholder="Número De Copas Internacionales">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="campeonActualId" class="col-lg-2 control-label">Campeón Actual</label>
+            <div class="col-sm-4">
+                <select name="campeonActual" id="campeonActualId">
+                    <option value="0">Sí</option>
+                    <option value="1">No</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-sm-4">
+                <input type="submit" value="Insertar" id="btnSave" class="btn btn-success"/>
+            </div>
+        </div>
+    </form>
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-sm-0">
+            <a href="/api/equipofutbol/equipos"><button class="btn btn-success">Cancelar</button></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

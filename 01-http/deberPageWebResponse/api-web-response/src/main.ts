@@ -4,10 +4,12 @@ import {NestExpressApplication} from "@nestjs/platform-express";
 import {join} from "path";
 import * as express from 'express';
 import * as path from 'path';
+const cookieParser = require('cookie-parser');
 
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule) as NestExpressApplication;
+  app.use(cookieParser('Secreto'));
   app.setViewEngine('ejs');
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.use(express.static('publico'));
