@@ -33,9 +33,13 @@ export class JugadorController {
 
     @Get('buscarJugador')
     buscarPaginaJugador(@Query() nombreBuscar,
-                       @Res() res){
+                       @Res() res,
+                        @Req() req){
+        const cookieSeg = req.signedCookies;
+        const nombre = cookieSeg.usuario;
         const arreglojugador = this._jugadorService.buscarPorNombre(nombreBuscar.nombreCompletoJugador);
-        res.render('jugadores/inicio', {arreglojugador:arreglojugador});
+        res.cookie('usuario', nombre, {signed:true});
+        res.render('jugadores/inicio', {arreglojugador:arreglojugador, nombre:nombre});
     }
 
     @Get('crearPaginaJugador')
@@ -51,21 +55,29 @@ export class JugadorController {
     @Post('crearJugador')
     crearJugadorPost(
         @Body() jugador: Jugador,
-        @Res() res
+        @Res() res,
+        @Req() req
     ) {
+        const cookieSeg = req.signedCookies;
+        const nombre = cookieSeg.usuario;
         jugador.numeroCamiseta = Number(jugador.numeroCamiseta);
         jugador.fechaIngresoEquipo = new Date(jugador.fechaIngresoEquipo);
         jugador.goles = Number(jugador.goles);
         this._jugadorService.crear(jugador);
+        res.cookie('usuario', nombre, {signed:true});
         res.redirect('/api/jugador/jugadores');
     }
 
     @Post('eliminarJugador')
     eliminarEquipoDelete(@Body() jugador: Jugador,
-                         @Res() res)
+                         @Res() res,
+                         @Req() req)
     {
+        const cookieSeg = req.signedCookies;
+        const nombre = cookieSeg.usuario;
         jugador.id = Number(jugador.id);
         const arregloEquipoEliminado = this._jugadorService.eliminarPorId(jugador.id);
+        res.cookie('usuario', nombre, {signed:true});
         res.redirect('/api/jugador/jugadores');
     }
 }

@@ -23,7 +23,6 @@
       <change afterPath="$PROJECT_DIR$/api-web-response/views/jugadores/crear.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-web-response/views/jugadores/inicio.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-web-response/views/menu/inicio.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,20 +34,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api-web-response/src/equipo_futbol/equipo_futbol.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,14 +70,14 @@
         <option value="$PROJECT_DIR$/api-web-response/src/jugador/jugador.module.ts" />
         <option value="$PROJECT_DIR$/api-web-response/src/app.module.ts" />
         <option value="$PROJECT_DIR$/api-web-response/src/jugador/jugador.service.ts" />
-        <option value="$PROJECT_DIR$/api-web-response/src/equipo_futbol/equipo_futbol.controller.ts" />
-        <option value="$PROJECT_DIR$/api-web-response/src/jugador/jugador.controller.ts" />
         <option value="$PROJECT_DIR$/api-web-response/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/api-web-response/views/menu/inicio.ejs" />
         <option value="$PROJECT_DIR$/api-web-response/views/jugadores/crear.ejs" />
         <option value="$PROJECT_DIR$/api-web-response/views/jugadores/inicio.ejs" />
         <option value="$PROJECT_DIR$/api-web-response/views/equipos/crear.ejs" />
         <option value="$PROJECT_DIR$/api-web-response/views/equipos/inicio.ejs" />
+        <option value="$PROJECT_DIR$/api-web-response/src/equipo_futbol/equipo_futbol.controller.ts" />
+        <option value="$PROJECT_DIR$/api-web-response/src/jugador/jugador.controller.ts" />
       </list>
     </option>
   </component>
@@ -143,6 +129,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="equipo_futbol" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="deberPageWebResponse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="deberPageWebResponse" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web-response" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jugador" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -187,16 +180,17 @@
       <workItem from="1559352278450" duration="21305000" />
       <workItem from="1559419362683" duration="7600000" />
       <workItem from="1559450291431" duration="52000" />
+      <workItem from="1559508303694" duration="1123000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41775000" />
+    <option name="totallyTimeSpent" value="42898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -209,7 +203,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32916668" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -298,23 +292,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api-web-response/src/equipo_futbol/equipo_futbol.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="33" column="53" lean-forward="true" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-web-response/src/jugador/jugador.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-394">
-          <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
-          <folding>
-            <element signature="e#0#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api-web-response/views/menu/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -360,9 +337,26 @@
     <entry file="file://$PROJECT_DIR$/api-web-response/src/equipo_futbol/equipo_futbol.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web-response/src/equipo_futbol/equipo_futbol.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="52" column="52" lean-forward="true" selection-start-line="52" selection-start-column="52" selection-end-line="52" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api-web-response/src/jugador/jugador.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#89#0" expanded="true" />
           </folding>
         </state>
       </provider>

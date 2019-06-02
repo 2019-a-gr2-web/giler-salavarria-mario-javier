@@ -21,9 +21,13 @@ export class Equipo_futbolController {
 
     @Get('buscarEquipo')
     buscarPaginaEquipo(@Query() nombreBuscar,
-                        @Res() res){
-            const arregloEquipos = this._equipoFutbolService.buscarPorNombre(nombreBuscar.nombre);
-            res.render('equipos/inicio', {arregloEquipos:arregloEquipos});
+                        @Res() res,
+                        @Req() req){
+        const cookieSeg = req.signedCookies;
+        const nombre = cookieSeg.usuario;
+        const arregloEquipos = this._equipoFutbolService.buscarPorNombre(nombreBuscar.nombre);
+        res.cookie('usuario', nombre, {signed:true});
+        res.render('equipos/inicio', {arregloEquipos:arregloEquipos, nombre:nombre});
     }
 
     @Get('crearPaginaEquipo')
@@ -38,20 +42,28 @@ export class Equipo_futbolController {
     @Post('crearEquipo')
     crearEquipoPost(
         @Body() equipofutbol: Equipofutbol,
-        @Res() res
+        @Res() res,
+        @Req() req
     ) {
+        const cookieSeg = req.signedCookies;
+        const nombre = cookieSeg.usuario;
         equipofutbol.numeroCopasInternacionales = Number(equipofutbol.numeroCopasInternacionales);
         equipofutbol.fechaCreacion = new Date(equipofutbol.fechaCreacion);
         this._equipoFutbolService.crear(equipofutbol);
+        res.cookie('usuario', nombre, {signed:true});
         res.redirect('/api/equipofutbol/equipos');
     }
 
     @Post('eliminarEquipo')
     eliminarEquipoDelete(@Body() equipofutbol: Equipofutbol,
-                         @Res() res)
+                         @Res() res,
+                         @Req() req)
     {
+        const cookieSeg = req.signedCookies;
+        const nombre = cookieSeg.usuario;
         equipofutbol.id= Number(equipofutbol.id);
         const arregloEquipoEliminado = this._equipoFutbolService.eliminarPorId(equipofutbol.id);
+        res.cookie('usuario', nombre, {signed:true});
         res.redirect('/api/equipofutbol/equipos');
     }
 }
