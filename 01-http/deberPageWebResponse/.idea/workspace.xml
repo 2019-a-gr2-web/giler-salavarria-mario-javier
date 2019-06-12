@@ -23,6 +23,7 @@
       <change afterPath="$PROJECT_DIR$/api-web-response/views/jugadores/crear.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-web-response/views/jugadores/inicio.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/api-web-response/views/menu/inicio.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +35,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -103,7 +104,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -129,23 +129,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="equipo_futbol" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="deberPageWebResponse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="deberPageWebResponse" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web-response" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="jugador" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../02-servidor-web-nodejs" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -181,11 +175,15 @@
       <workItem from="1559419362683" duration="7600000" />
       <workItem from="1559450291431" duration="52000" />
       <workItem from="1559508303694" duration="1123000" />
+      <workItem from="1559567609685" duration="203000" />
+      <workItem from="1559584745056" duration="443000" />
+      <workItem from="1560311399739" duration="196000" />
+      <workItem from="1560369270100" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42898000" />
+    <option name="totallyTimeSpent" value="43793000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
