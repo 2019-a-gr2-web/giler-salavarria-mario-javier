@@ -19,23 +19,31 @@ export class TragosService{
         };
         this.crear(traguito);
         const objetoEntidad = this._tragosRepository.create(traguito);
+        console.log('LINEA 1');
         this._tragosRepository.save(objetoEntidad)
             .then(
             (datos) => {
+                console.log('LINEA 2');
                 console.log('Dato creado:', datos);
             }
         )
             .catch(
                 (error) => {
+                    console.log('LINEA 3');
                     console.log('Error:',error);
                 }
             )
+        console.log('LINEA 4');
     }
-    crear(nuevoTrago:Trago):Trago{
-        nuevoTrago.id = this.recnum;
-        this.recnum++;
-        this.bddTragos.push(nuevoTrago);
-        return nuevoTrago;
+
+    buscar(parametrosBusqueda?):Promise<Trago[]>{
+        return this._tragosRepository.find(parametrosBusqueda);
+    }
+
+    crear(nuevoTrago:Trago):Promise<Trago>{
+        const objetoEntidad = this._tragosRepository
+            .create(nuevoTrago);
+        return this._tragosRepository.save(objetoEntidad);
     }
     buscarPorId(id:number):Trago{
         return this.bddTragos.find(

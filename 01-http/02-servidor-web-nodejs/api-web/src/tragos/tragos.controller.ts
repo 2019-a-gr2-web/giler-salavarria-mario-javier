@@ -9,10 +9,10 @@ export class TragosController{
     }
 
     @Get('lista')
-    listarTragos(
+    async listarTragos(
         @Response() res
     ){
-        const arregloTragos = this._tragosService.bddTragos;
+        const arregloTragos = await this._tragosService.buscar();
         res.render('tragos/lista-tragos',{
             arregloTragos:arregloTragos
         })
@@ -26,7 +26,7 @@ export class TragosController{
     }
 
     @Post('crear')
-    crearTragoPost(
+    async crearTragoPost(
         @Body() trago:Trago,
         @Res() res
         // @Body('nombre') nombre:string,
@@ -38,9 +38,14 @@ export class TragosController{
         trago.gradosAlcohol = Number(trago.gradosAlcohol);
         trago.precio = Number(trago.precio);
         trago.fechaCaducidad = new Date(trago.fechaCaducidad);
-        this._tragosService.crear(trago);
-        res.redirect('/api/traguito/lista')
-
+        try{
+            const respuestaCrear = await this._tragosService.crear(trago);
+            console.log(respuestaCrear);
+            res.redirect('/api/traguito/lista');
+        }catch (e) {
+            console.error(e);
+            res.status(500).send({mensaje : 'Error', codigo : '500'});
+        }
         // console.log('Trago: ', trago, typeof );
         // console.log('Nombre: ', nombre, typeof );
         // console.log('Tipo: ', tipo, typeof );
